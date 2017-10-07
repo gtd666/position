@@ -1,0 +1,149 @@
+*
+  box-sizing: border-box
+body
+  position: absolute
+  top: 0
+  bottom: 0
+  width: 100%
+  font-size: .12rem
+  background: #eee
+  display: flex
+  flex-direction: column
+  .header
+    width: 100%
+    padding: 0.05rem
+    height: 0.35rem
+    border-bottom: 0.01rem solid #ccc
+    .in
+      width: 100%
+      border-radius: 0.04rem
+      background: #fff
+      height: 100%
+      position: relative
+      .source
+        position: absolute
+        top: 0.035rem
+        left: 40%
+        font-size: 0.16rem
+      input
+        border: none
+        width: 100%
+        height: 100%
+        background: #fff
+        padding-left: 47%
+.section
+  width: 100%
+  overflow-y: scroll
+  flex: 1
+  background: #fff
+  .content
+    width: 100%
+    padding: 0 0.05rem
+    height: 0.45rem
+    border-bottom: 0.01rem solid #ccc
+    position: relative
+    display: flex
+    .content-r
+      display: flex
+      position: absolute
+      top: 0
+      right: 0
+      display: none
+
+  .while
+    width: 0.82rem
+    height: 100%
+    background: #c7c7cc
+    color: #fff
+    text-align: center
+    line-height: 0.45rem
+  .delect
+    width: 0.5rem
+    height: 100%
+    background: red
+    text-align: center
+    line-height: 0.45rem
+    color: #fff
+  .list
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    z-index: 99
+  .list dt
+    width: 0.36rem
+    height: 0.36rem
+    border-radius: 0.03rem
+    overflow: hidden
+    margin-right: 0.05rem
+  .list dt img
+    width: 100%
+    height: auto
+
+  .list dd
+    display: flex
+    flex: 2
+    flex-direction: column
+    .first
+      display: flex
+      justify-content: space-between
+.musice
+    width: 100%
+    height: 1.6rem
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+.musice-img
+    width: 1rem
+    height: 1rem
+    overflow: hidden
+    border-radius: 50%
+    background: #000
+    opacity: 0.8
+#music-sing
+  animation: change 1s linear infinite
+@keyframes change
+    from
+      transform: rotate(0deg)
+    to
+      transform: rotate(360deg)
+
+.img-con>img
+    width: 100%
+    height: auto
+.tu
+  position: absolute
+  top: 35%
+  left: 44%
+  z-index: 99
+.tu i
+  font-size: 0.5rem
+  color: #ebebeb
+.musice-song
+    width: 0.4rem
+    height: 0.4rem
+    overflow: hidden
+    position: absolute
+    top: 7px
+    left: 0
+    opacity: 0
+#move
+  text-align: center
+  colog: orangered
+  font-size: .18rem
+.footer
+  width: 100%
+  height: 0.44rem
+  display: flex
+  background: #eee
+  border-top: 0.01rem solid #ccc
+  .tit
+    flex: 1
+    flex-direction: column
+    text-align: center
+    padding: 0.03rem 0
+  .tit i
+    font-size: 0.18rem
+    margin-bottom: 0.05rem
+

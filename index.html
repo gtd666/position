@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信界面</title>
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="in">
+        <i class="source fa fa-search"></i>
+        <input type="text" placeholder="搜索">
+    </div>
+</header>
+<section class="section">
+    <div class="content">
+       <dl class="list">
+           <dt><img src="images/headx-1.jpg" alt=""></dt>
+           <dd>
+               <p class="first"><b>陈奕迅</b><span>13:10</span></p>
+               <p class="first"><span>晚上演唱会来看麽？</span><span><i class="fa fa-bell-slash-o"></i></span></p>
+           </dd>
+       </dl>
+       <div class="content-r">
+           <!-- <div class="while">标为未读</div> -->
+           <div class="delect">删除</div>
+       </div>
+   </div>
+    <div class="content">
+        <dl class="list">
+            <dt><img src="images/headx-2.jpg" alt=""></dt>
+            <dd>
+                <p class="first"><b>脸脸</b><span>20:10</span></p>
+                <p class="first"><span>彭于晏是我老公</span><span><i class="fa fa-bell-slash-o"></i></span></p>
+            </dd>
+        </dl>
+        <div class="content-r">
+            <!--<div class="while">标为未读</div>-->
+            <div class="delect">删除</div>
+        </div>
+    </div>
+    <div class="musice">
+        <div class="musice-img">
+            <img src="images/headx-1.jpg" alt="">
+            <!--<i class="fa fa-bullseye"></i>-->
+        </div>
+        <div class="tu">
+            <i class="fa fa-toggle-left"></i>
+            <p class="musice-song"><audio src="musice/meet.mp3" id="sing"></audio></p>
+        </div>
+
+    </div>
+    <p class="animated rubberBand infinite" id="move">来啊！造作啊</p>
+</section>
+<footer class="footer">
+    <dl class="tit">
+        <dt><i class="fa fa-comment-o"></i></dt>
+        <dd>微信</dd>
+    </dl>
+    <dl class="tit">
+        <dt><i class="fa fa-user-circle-o"></i></dt>
+        <dd>通讯录</dd>
+    </dl>
+    <dl class="tit">
+        <dt><i class="fa fa-globe"></i></dt>
+        <dd>发现</dd>
+    </dl>
+    <dl class="tit">
+        <dt><i class="fa fa-user-o"></i></dt>
+        <dd>我</dd>
+    </dl>
+
+</footer>
+<script src="js/zepto.min.js"></script>
+<script src="js/event.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/jquery.js"></script>
+<script>
+    $('.tu').click(function(){
+        var first=$(this).children()[0];
+        if($(first).attr('class')=='fa fa-bullseye'){
+            $(first).removeClass();
+            $(first).addClass('fa fa-toggle-left');
+            $('#sing').removeAttr('controls');
+            $('.musice-img').removeAttr("id");
+
+
+        }else{
+            $(first).removeClass();
+            $(first).addClass('fa fa-bullseye');
+            $('#sing').attr('controls','controls');
+            $('.musice-img').attr('id',"music-sing");
+
+        }
+
+    })
+</script>
+</body>
+</html>
